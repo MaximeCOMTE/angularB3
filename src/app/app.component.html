@@ -1,5 +1,11 @@
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
 <ul>
   <li><a>Home</a></li>
-  <li style="float:right;"><a routerLink="">Contact</a></li>
-  <li style="float:right;"><a class="active" href="#">About</a></li>
+  <li style="float:right;"><a routerLink="/capacite" routerLinkActive="active" ariaCurrentWhenActive="page">Capacité</a></li>
+  <li style="float:right;"><a routerLink="/pokemon" routerLinkActive="active" ariaCurrentWhenActive="page">Pokémon</a></li>
 </ul>
+<body ><router-outlet></router-outlet></body>

@@ -1,0 +1,40 @@
+Identifiant Pokedex (pokedexId).
+Génération (generation).
+Catégorie (category).
+Nom (name), qui contient des sous-catégories :
+  Français (fr)
+  Anglais (en)
+  Japonais (jp)
+Sprites (sprites), qui contient des sous-catégories :
+  Regular (regular)
+  Shiny (shiny)
+  Gmax (gmax)
+Types (types), qui contient des sous-catégories pour chaque type :
+  Nom (name)
+  Image (image)
+Talents (talents), qui contient des sous-catégories pour chaque talent :
+  Nom (name)
+  Talent caché (tc)
+Statistiques (stats), qui contient des sous-catégories :
+  HP (hp)
+  Attaque (atk)
+  Défense (def)
+  Attaque spéciale (spe_atk)
+  Défense spéciale (spe_def)
+  Vitesse (vit)
+Résistances (resistances), qui contient des sous-catégories pour chaque type de résistance :
+  Nom (name)
+  Multiplicateur (multiplier)
+Évolution (evolution), qui contient des sous-catégories :
+  Précédent (pre)
+  Suivant (next)
+  Méga (mega)
+  Taille (height).
+  Poids (weight).
+  Groupes d'œufs (egg_groups).
+Sexe (sexe), qui contient des sous-catégories :
+  Mâle (male)
+  Femelle (female)
+Taux de capture (catch_rate).
+Niveau 100 (level_100).
+Forme (forme).
