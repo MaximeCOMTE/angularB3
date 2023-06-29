@@ -1,6 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {DataService} from "../service/data.service";
-import {takeUntil} from "rxjs";
+import {filter, Subject, takeUntil} from "rxjs";
+import {Pokemon} from "../models/Pokemon";
+import {FilterPipe} from "../filter.pipe";
 
 
 @Component({
@@ -36,9 +38,10 @@ export class PokemonComponent implements OnInit, OnDestroy {
   }
 
   getPokemonsList() {
+
     if (this.isLoading) return;
     this.isLoading = true;
-
+      if (localStorage.getItem('listepokemon')==null){
     this.pokemonService
       .getPokemonList()
       .pipe(takeUntil(this.unsubscribe$))
@@ -48,13 +51,23 @@ export class PokemonComponent implements OnInit, OnDestroy {
           this.isLoading = false;
         },
         complete: () => {
+          let poketemp = JSON.stringify(this.pokemons)
+          localStorage.setItem('listepokemon', poketemp);
 
         },
       });
+    }
+
+    else {
+      this.pokemons = JSON.parse(localStorage.getItem('listepokemon')!)
+    }
   }
 
   sortPokemonsList(pokemons: Pokemon[]) {
     this.pokemons = pokemons
     console.log(this.pokemons);
   }
+
+  searchText:string='';
+  protected readonly filter = filter;
 }

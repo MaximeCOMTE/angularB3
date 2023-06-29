@@ -1,7 +1,29 @@
-<div class="justify">
-  <p-card header="Titre" class="">
+<link rel="stylesheet" href="https://unpkg.com/primeflex@^3/primeflex.css">
 
+<div class="grid">
+  <div class="m-2 col">
+    <div class="p-card px-2 pb-2 ">
+      <div class="flex justify-content-center flex-wrap card-container ">
+        <div class="text-xs md:text-base lg:text-lg">
+          <h2 class="mb-1">Liste des {{this.pokemons.length}} Pokémons actuels :</h2></div>
+      </div>
+      <div class="flex justify-content-center flex-wrap card-container mt-4">
+        <span class="p-float-label">
+          <input pInputText id="username" [(ngModel)]="searchText"/>
+          <label>Pokémon</label>
+        </span>
+      </div>
 
-  </p-card>
+    </div>
+    <div class="grid justify-content-center md:justify-content-evenly">
+      <div *ngFor="let pokemon of pokemons |slice:1:pokemons.length| appFilter:searchText" class=" col12 colspec md:col-4 lg:col-3 xl:col-2" >
+        <app-pokecard [pokemon]="pokemon" class="col"></app-pokecard>
+      </div>
+    </div>
+    </div>
+
 </div>
+
+
+
 

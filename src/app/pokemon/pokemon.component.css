@@ -1,3 +1,9 @@
-body {
-  font-family: var(--font-family);
+@media screen and (min-width: 450px) and (max-width: 768px) {
+ .colspec{
+   flex: 0 0 auto;
+   width: 66.6667%;
+   justify-content: center;
+ }
+
+
 }

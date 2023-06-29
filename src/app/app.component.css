@@ -1,9 +1,23 @@
+@font-face {font-family: "Pokemon Hollow"; src: url("//db.onlinewebfonts.com/t/6e5393a64ca23c455e8568d409e82da6.eot"); src: url("//db.onlinewebfonts.com/t/6e5393a64ca23c455e8568d409e82da6.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/6e5393a64ca23c455e8568d409e82da6.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/6e5393a64ca23c455e8568d409e82da6.woff") format("woff"), url("//db.onlinewebfonts.com/t/6e5393a64ca23c455e8568d409e82da6.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/6e5393a64ca23c455e8568d409e82da6.svg#Pokemon Hollow") format("svg"); }
+@import url(//db.onlinewebfonts.com/c/6e5393a64ca23c455e8568d409e82da6?family=Pokemon+Hollow);
+
+
+
+
+
+*{
+
+  overflow-x: hidden;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #ED1729;
+  border-bottom-left-radius : 5px;
+  border-bottom-right-radius : 5px;
 }
 
 li {
@@ -14,11 +28,8 @@ li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding-bottom:0.5rem;
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #111;
-}
+

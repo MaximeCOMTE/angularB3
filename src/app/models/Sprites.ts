@@ -1,5 +1,5 @@
 export interface Sprites{
-  regular: string;
+  regular: string[];
   shiny: string;
   gmax: null;
 }
